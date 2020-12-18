@@ -1,0 +1,293 @@
+/* General style elements*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background: #b9ada3;
+  color: #eaeaea;
+  line-height: 1.5;
+  text-align: center;
+  }
+
+.btn {
+  display: inline-block;
+  background: #98908a;
+  color: #eaeaea;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 10px 10px;
+  border: 1px solid #98908a;
+  margin: 2px 0;
+  z-index: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  #topnav li,
+  #footer p {
+    font-family: 'Homemade Apple', Helvetica, cursive;
+    color: #595147;
+  }
+
+  #topnav li a,
+  p {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  /* Topnav */
+
+  #topnav {
+    display: flex;
+    justify-content: center;
+  }
+
+  #topnav ul {
+    list-style: none;
+    margin-bottom: 0px;
+    padding: 0;
+    }
+
+  #topnav li {
+    float: left;
+    }
+
+  #topnav li a {
+    text-align: center;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #eaeaea;
+    font-size: 12px;
+    }
+
+  /* Header-section */
+
+#header-section .background-image {
+  display: flex;
+  background: #b9ada3 url('billeder/header.jpg');
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 450px;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+#header-section h1 {
+  padding-top: 200px;
+  padding-bottom: 0;
+  color: #595147;
+}
+
+/* Section a - om mig */
+
+#section-a {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  margin: 50px;
+  }
+
+/* Section b - mine kompetencer */
+
+#section-b {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  flex-direction: column;
+}
+
+#section-b .kompetencer {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#section-b p {
+  color: #eaeaea;
+}
+
+#section-b ul li {
+  list-style: none;
+  border: 1px solid #595147;
+  border-radius: 4px;
+  color: #595147;
+  padding: 20px;
+  margin: 20px;
+}
+
+#section-b .laptopicon,
+.pencilicon,
+.cameraicon {
+  height: auto;
+  width: 50px;
+  align-self: center;
+}
+
+/* Section b 1 - animation */
+
+#section-b-1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+  margin-top: -50px;
+}
+
+#section-b-1 .sprite {
+  width: 500px;
+  height: 500px;
+  background: url('billeder/tree3.png') 0 0 no-repeat;
+  animation: play 6s steps(14) infinite;
+}
+
+@keyframes play {
+  0%{ background-position: 0px; }
+  100% { background-position: -7000px; }
+}
+
+/* Section c - mine projekter */
+
+#section-c {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: -25px;
+}
+
+#section-c ul {
+  list-style: none;
+}
+
+#section-c img {
+  display: block;
+  border: 1px solid #595147;
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: 25px;
+  width: 100%;
+  height: auto;
+}
+
+/* Section d - kontakt mig */
+
+#section-d {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 25px;
+  padding: 20px;
+}
+
+#section-d p {
+  padding: 2px;
+}
+
+/* Footer */
+
+#footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 10px;
+  padding-bottom: 80px;
+  background-color: #eaeaea;
+  border: 1px solid #595147;
+  border-radius: 4px;
+}
+
+#footer p {
+  text-align: center;
+  color: #595147;
+}
+
+
+/* Media queries */
+
+@media(min-width: 900px) {
+
+/* General styles */
+
+#topnav li a,
+p {
+  font-size: 16px;
+  }
+
+/* Header section */
+
+  #header-section .background-image {
+    height: 400px;
+    width: 100%;
+  }
+
+  #header-section .btn:hover {
+      background: #eaeaea;
+      color: #595147;
+    }
+
+/* Topnav */
+
+  #topnav li a:hover {
+    background: #b9ada3;
+    color: #595147;
+    }
+
+/* Section-a */
+
+  #section-a p {
+    min-width: 450px;
+  }
+
+  /* Section-c */
+
+  #section-c ul {
+    width: 100%;
+    margin: 50px;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #section-c .projekter {
+    float: left;
+    display: inline;
+    }
+
+  #section-c img {
+    width: 400px;
+    height: auto;
+  }
+
+  }
+
+  @media (min-width: 1200px) {
+
+    #section-a p {
+      align-content: center;
+      min-width: 450px;
+      margin-left: 300px;
+      margin-right: 300px;
+    }
+
+    #section-b ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+  }
